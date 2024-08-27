@@ -13,6 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+
+    <!-- Include Animate.css for animations (required for WOW.js) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
 </head>
 <body>
 
@@ -48,7 +53,7 @@
     #note small {
         position: relative;
         display: inline-block;
-        animation: mymove 5s infinite;
+        animation: mymove 10s infinite;
         animation-timing-function: all;
     }
 
@@ -375,11 +380,11 @@
 
 <!-- Carousel Start -->
 <div class="container-fluid px-0">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselId" class="carousel slide " data-bs-ride="carousel">
                
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img src="img/carousel-1.jpg" class="img-fluid" alt="First slide">
+                        <img src="img/carousel-1.jpg" class="img-fluid wow pulse" alt="First slide">
                         <div class="carousel-caption">
                             <div class="container carousel-content">
                                 <h6 class="text h4 animated fadeInUp">STUDY IN SOUTH KOREA</h6>
@@ -391,7 +396,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/carousel-2.jpg" class="img-fluid" alt="Second slide">
+                        <img src="img/carousel-2.jpg" class="img-fluid " alt="Second slide">
                         <div class="carousel-caption">
                             <div class="container carousel-content">
                                 <h6 class="text h4 animated fadeInUp">BEST SERVICE</h6>
@@ -415,7 +420,75 @@
         </div>
         <!-- Carousel End -->
 
+
+
+        <!-- Fact Start -->
+        <div class="container-fluid bg-secondary py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 wow slideInUp" >
+                        <div class="d-flex counter">
+                            <h1 class="me-3 text-primary counter-value">99</h1>
+                            <h5 class="text-white mt-1">Success in getting happy customer</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 wow slideInUp" >
+                        <div class="d-flex counter">
+                            <h1 class="me-3 text-primary counter-value">09</h1>
+                            <h5 class="text-white mt-1">Universities In South Korea</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 wow slideInUp">
+                        <div class="d-flex counter">
+                            <h1 class="me-3 text-primary counter-value">100</h1>
+                            <h5 class="text-white mt-1">% Visa Success Rate</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 wow slideInUp">
+                        <div class="d-flex counter">
+                            <h1 class="me-3 text-primary counter-value">5</h1>
+                            <h5 class="text-white mt-1">Stars reviews given by satisfied clients</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fact End -->
       
+         <!-- About Start -->
+         <div class="container-fluid py-5 my-5">
+            <div class="container pt-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow pulse" data-wow-delay=".3s"">
+                        <div class="h-100 position-relative">
+                            <img src="img/about-1.jpg" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="img/about-2.jpg" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s"">
+                        <h5 class="text-primary">About Us</h5>
+                        <h1 class="mb-4">About EDUGATE SRI LANKA</h1>
+                        <p>EduGate Sri Lanka is an educational consultancy that specifically focuses on facilitating higher education opportunities in South Korea. The organization is dedicated to helping Sri Lankan students navigate the process of applying to universities and colleges in South Korea. This includes services such as academic counseling, university selection, application assistance, visa processing, and guidance on adapting to life in South Korea.
+                            <br>
+                            Given South Korea's reputation for high-quality education, particularly in fields like technology, engineering, and business, EduGate Sri Lanka aims to connect students with leading Korean institutions that match their academic and career goals. The consultancy may also offer additional support, such as Korean language training, to help students integrate more smoothly into their new environment.
+                        </p>
+                            <p class="mb-4">By specializing in South Korea, EduGate Sri Lanka provides tailored advice and insights, leveraging its expertise in the South Korean education system to ensure that students make informed decisions and are well-prepared for their studies abroad.</p>
+                        
+                        <a href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
