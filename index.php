@@ -144,22 +144,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mg-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">Services</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="#team">Our Team</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#review">Reviews</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Our Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="#">Reviews</a>
+          <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="#contact">Contact Us</a>
         </li>
       
       </ul>
@@ -379,7 +380,9 @@
 
 
 <!-- Carousel Start -->
-<div class="container-fluid px-0">
+<section id = "home">
+
+        <div class="container-fluid px-0">
             <div id="carouselId" class="carousel slide " data-bs-ride="carousel">
                
                 <div class="carousel-inner" role="listbox">
@@ -418,6 +421,7 @@
                 </button>
             </div>
         </div>
+        </section>
         <!-- Carousel End -->
 
 
@@ -456,6 +460,7 @@
         <!-- Fact End -->
       
          <!-- About Start -->
+          <section id = "about">
          <div class="container-fluid py-5 my-5">
             <div class="container pt-5">
                 <div class="row g-5">
@@ -481,7 +486,149 @@
                 </div>
             </div>
         </div>
+        </section>
         <!-- About End -->
+
+        <style>
+            .team-item {
+    border-top: 30px solid black !important;
+    background: rgba(239, 239, 241, 0.8);
+}
+
+.team-content::before {
+    height: 200px;
+    display: block;
+    content: "";
+    position: relative;
+    top: -101px;
+    background: var(--bs-secondary);
+    clip-path: polygon(50% 50%, 100% 50%, 50% 100%, 0% 50%);
+    padding: 60px;
+    opacity: 1;
+}
+
+.team-img-icon {
+    position: relative;
+    margin-top: -200px;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.team-img {
+    width: 300px;
+    border: 15px solid white;
+}
+
+.team-img img {
+    border: 10px solid black;
+    transition: .5s;
+}
+
+.team-item:hover h4 {
+    color: blue;
+    transition: .5s;
+}
+
+.team-item:hover .team-img img {
+    transform: scale(1.05);
+    border: 10px solid black;
+}
+
+
+
+
+
+
+        </style>
+
+        <!-- Team Start -->
+        <div class="container-fluid py-5 mb-5 team">
+            <div class="container">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Our Team</h5>
+                    <h1>Meet our expert Team</h1>
+                </div>
+                <div class="owl-carousel team-carousel wow fadeIn" data-wow-delay=".5s">
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="img/team-1.jpg" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Full Name</h4>
+                                    <p class="m-0">Designation</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="img/team-2.jpg" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Full Name</h4>
+                                    <p class="m-0">Designation</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="img/team-3.jpg" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Full Name</h4>
+                                    <p class="m-0">Designation</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="img/team-4.jpg" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Full Name</h4>
+                                    <p class="m-0">Designation</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
