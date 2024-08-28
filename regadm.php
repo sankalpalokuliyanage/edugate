@@ -5,20 +5,45 @@ if(isset($_POST['register'])) {
     $user_pass = $_POST['password'];
     $user_conPass = $_POST['conpass'];
 
-    // Database connection
-    include_once('db.php');
+    // Check if passwords match
+    if ($user_pass !== $user_conPass) {
+        echo "<script>alert('Passwords do not match!');</script>";
+    } else {
+        // Hash the password
+        $hashed_pass = password_hash($user_pass, PASSWORD_DEFAULT);
 
-    // Insert query
-    $sql = "INSERT INTO admin(username, password, email) VALUES ('$user_name', '$user_pass', '$user_email')";
-    $qry = mysqli_query($conn, $sql) or die("Data insert Error");
+        // Database connection
+        include_once('db.php');
 
-    // Redirect to login page if registration is successful
-    if($qry) {
-        header("Location: adminlog.php");
-        exit(); // Ensure the script stops executing after the redirect
+        // Check if username already exists
+        $check_sql = "SELECT * FROM admin WHERE username = ?";
+        $stmt = $conn->prepare($check_sql);
+        $stmt->bind_param('s', $user_name);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            echo "<script>alert('Username already exists!');</script>";
+        } else {
+            // Insert query
+            $sql = "INSERT INTO admin(username, password, email) VALUES (?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('sss', $user_name, $hashed_pass, $user_email);
+
+            if ($stmt->execute()) {
+                header("Location: adminlog.php");
+                exit(); // Ensure the script stops executing after the redirect
+            } else {
+                echo "<script>alert('Data insert Error');</script>";
+            }
+        }
+
+        $stmt->close();
+        $conn->close();
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
