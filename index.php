@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDUGATE SRI LANKA</title>
+    <title>EDUGATE GLOBAL</title>
 
     <!-- Favicons -->
     <link href="img/Logo.png" rel="icon">
@@ -124,7 +124,7 @@
                         <small class="me-3 text-white-50"><b>275/2, HIGH LEVEL ROAD, PITIPANA JUNCTION,<br>  HOMAGAMA, SRI LANKA.</b></small>
                         <!-- <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-secondary"></i></a>Email@Example.com</small> -->
                     </div>
-                    <div id="note" class="text-secondary d-none d-xl-flex"><small style="color: beige;">Sri Lanka's No 1 South Korea Student Visa Consultant</small></div>
+                    <div id="note" class="text-secondary d-none d-xl-flex"><small style="color: beige;">No 1 South Korea Student Visa Consultant</small></div>
                     <div class="top-link">
                         <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-primary"></i></a>
                         <!-- <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-twitter text-primary"></i></a> -->
@@ -140,7 +140,7 @@
 <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="img/Logo.png" class = "logo" alt="logo" >
+            <img src="img/Logo_global.png" class = "logo" alt="logo" >
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -478,12 +478,23 @@
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s"">
                         <h5 class="text-primary">About Us</h5>
-                        <h1 class="mb-4">About EDUGATE SRI LANKA</h1>
-                        <p>EduGate Sri Lanka is an educational consultancy that specifically focuses on facilitating higher education opportunities in South Korea. The organization is dedicated to helping Sri Lankan students navigate the process of applying to universities and colleges in South Korea. This includes services such as academic counseling, university selection, application assistance, visa processing, and guidance on adapting to life in South Korea.
+                        <h1 class="mb-4">About EDUGATE GLOBAL</h1>
+                        <p>EduGate Global is an educational consultancy that specifically focuses on facilitating 
+                          higher education opportunities in South Korea. 
+                          The organization is dedicated to helping Global 
+                          students navigate the process of applying to universities 
+                          and colleges in South Korea. This includes services such as 
+                          academic counseling, university selection, application assistance, 
+                          visa processing, and guidance on adapting to life in South Korea.
                             <br>
-                            Given South Korea's reputation for high-quality education, particularly in fields like technology, engineering, and business, EduGate Sri Lanka aims to connect students with leading Korean institutions that match their academic and career goals. The consultancy may also offer additional support, such as Korean language training, to help students integrate more smoothly into their new environment.
+                            Given South Korea's reputation for high-quality education, particularly in fields like technology, 
+                            engineering, and business, EduGate Global aims to connect students with leading Korean institutions 
+                            that match their academic and career goals. The consultancy may also offer additional support, 
+                            such as Korean language training, to help students integrate more smoothly into their new environment.
                         </p>
-                            <p class="mb-4">By specializing in South Korea, EduGate Sri Lanka provides tailored advice and insights, leveraging its expertise in the South Korean education system to ensure that students make informed decisions and are well-prepared for their studies abroad.</p>
+                            <p class="mb-4">By specializing in South Korea, EduGate Global provides tailored advice and insights, 
+                              leveraging its expertise in the South Korean education system to ensure that students make informed 
+                              decisions and are well-prepared for their studies abroad.</p>
                         
                         <a href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white">More Details</a>
                     </div>
