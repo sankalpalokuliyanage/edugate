@@ -1,3 +1,17 @@
+<?php
+    if(isset($_POST['submit'])){
+        $error = "";
+        include('db.php');
+        if(empty($_POST['email']) || empty($_POST['username']) || empty($_POST['name']) || empty($_POST['password']) || empty($_POST['conpass'])) {
+            $error = "Please enter all the details";
+        }
+
+    }
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,28 +98,28 @@
                             <div class="form-group py-2">
                                 <div class="input-field">
                                     <span class="fas fa-envelope p-2"></span>
-                                    <input type="text" name="email" id="email" placeholder="EMAIL" required>
+                                    <input type="text" name="email" id="email" placeholder="EMAIL" >
                                 </div>
                             </div>
 
                             <div class="form-group py-2">
                                 <div class="input-field">
                                     <span class="fas fa-user-alt p-2"></span>
-                                    <input type="text" name="username" id="username" placeholder="USERNAME" required>
+                                    <input type="text" name="username" id="username" placeholder="USERNAME" >
                                 </div>
                             </div>
 
                             <div class="form-group py-2">
                                 <div class="input-field">
                                     <span class="fas fa-address-card p-2"></span>
-                                    <input type="text" name="name" id="name" placeholder="FULL NAME" required>
+                                    <input type="text" name="name" id="name" placeholder="FULL NAME" >
                                 </div>
                             </div>
 
                             <div class="form-group py-1 pb-2">
                                 <div class="input-field">
                                     <span class="fas fa-lock px-2"></span>
-                                    <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+                                    <input type="password" name="password" id="password" placeholder="Enter your Password" >
                                     <button type="button" class="toggle-password">
                                         <span class="far fa-eye-slash"></span>
                                     </button>
@@ -115,7 +129,7 @@
                             <div class="form-group py-1 pb-2">
                                 <div class="input-field">
                                     <span class="fas fa-lock px-2"></span>
-                                    <input type="password" name="conpass" id="conpass" placeholder="Reenter your Password" required>
+                                    <input type="password" name="conpass" id="conpass" placeholder="Reenter your Password" >
                                     <button type="button" class="toggle-password">
                                         <span class="far fa-eye-slash"></span>
                                     </button>
@@ -124,7 +138,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" name="register" class="btn btn-primary btn-block">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
                             </div>
                         </form>
                     </div>
