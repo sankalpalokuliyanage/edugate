@@ -6,8 +6,8 @@
     <title>EDUGATE GLOBAL</title>
 
     <!-- Favicons -->
-    <link href="img/Logo.png" rel="icon">
-    <link href="img/Logo.png" rel="apple-touch-icon">
+    <link href="img/Logo_global.png" rel="icon">
+    <link href="img/Logo_global.png" rel="apple-touch-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
@@ -173,7 +173,16 @@
   </div>
 </nav>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggler = document.querySelector('.navbar-toggler');
+    var collapse = document.querySelector('#navbarSupportedContent');
 
+    toggler.addEventListener('click', function () {
+      collapse.classList.toggle('show');
+    });
+  });
+</script>
 <style>
    .carousel-item {
     position: relative;
@@ -506,6 +515,19 @@
 
 <section id="team" class="team section">
 
+<?php
+$uname = "root";
+$pass = "";
+$host = "localhost";
+$db = "eg_xrst";
+
+$conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
+
+$query = "SELECT * FROM members";
+$query_run = mysqli_query($conn, $query);
+?>
+
+
 <!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
 <h5 class="text-primary">Our Team</h5><br>
@@ -515,60 +537,31 @@
 
   <div class="row gy-4">
 
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-      <div class="team-member d-flex align-items-start">
-        <div class="pic"><img src="" class="img-fluid" alt=""></div>
-        <div class="member-info">
-          <h4>Dilon Marasinghe</h4>
-          <span>Director</span>
-          <p>Legal Consultant officer in South Korea.</p>
-          <!-- <div class="social">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""> <i class="bi bi-linkedin"></i> </a>
-          </div> -->
-        </div>
-      </div>
-    </div><!-- End Team Member -->
+  <?php
+  if(mysqli_num_rows($query_run) > 0) {
+    while($row = mysqli_fetch_assoc($query_run)){
+        ?>
 
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="team-member d-flex align-items-start">
-        <div class="pic"><img src="" class="img-fluid" alt=""></div>
-        <div class="member-info">
-          <h4>Dushmini</h4>
-          <span>Consultant</span>
-          <!-- <p>Aut maiores voluptates amet et quis praesentium qui senda para</p> -->
-          
-        </div>
-      </div>
-    </div><!-- End Team Member -->
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start">
+                <div class="pic">
+                    <img src="admin/<?php echo htmlspecialchars($row['picture']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($row['name']); ?>">
+                </div>
+                <div class="member-info">
+                    <h4><?php echo htmlspecialchars($row['name']); ?></h4>
+                    <span><?php echo htmlspecialchars($row['position']); ?></span>
+                    <p><?php echo htmlspecialchars($row['description']); ?></p>
+                </div>
+            </div>
+        </div><!-- End Team Member -->
 
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-      <div class="team-member d-flex align-items-start">
-        <div class="pic"><img src="" class="img-fluid" alt=""></div>
-        <div class="member-info">
-          <h4>Dilini</h4>
-          <span>Consultant</span>
-          <!-- <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p> -->
-          
-        </div>
-      </div>
-    </div><!-- End Team Member -->
-
-    <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-      <div class="team-member d-flex align-items-start">
-        <div class="pic"><img src="" class="img-fluid" alt=""></div>
-        <div class="member-info">
-          <h4>Amanda Jepson</h4>
-          <span></span>
-          <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-          
-        </div>
-      </div>
-    </div> -->
+    <?php
+    }
+} else {
+    echo "<p>No team members found.</p>";
+}
+?>
     
-    <!-- End Team Member -->
 
   </div>
 
