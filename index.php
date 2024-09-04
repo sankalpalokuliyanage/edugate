@@ -173,16 +173,7 @@
   </div>
 </nav>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var toggler = document.querySelector('.navbar-toggler');
-    var collapse = document.querySelector('#navbarSupportedContent');
 
-    toggler.addEventListener('click', function () {
-      collapse.classList.toggle('show');
-    });
-  });
-</script>
 <style>
    .carousel-item {
     position: relative;
@@ -635,7 +626,7 @@ $query_run = mysqli_query($conn, $query);
   display: block;
   width: 50px;
   height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 85%);
+  background: color-mix(in srgb, #1842b6, transparent 85%);
   bottom: 0;
   left: 0;
 }
@@ -651,52 +642,81 @@ $query_run = mysqli_query($conn, $query);
   font-size: 14px;
 }
 
-.team .team-member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-}
 
-@media (max-width: 468px) {
-  .team .team-member .social {
-    justify-content: center;
-  }
-}
 
-.team .team-member .social a {
-  background: color-mix(in srgb, var(--default-color), transparent 94%);
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
-}
 
-.team .team-member .social a i {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 16px;
-  margin: 0 2px;
-}
 
-.team .team-member .social a:hover {
-  background: var(--accent-color);
-}
-
-.team .team-member .social a:hover i {
-  color: var(--contrast-color);
-}
-
-.team .team-member .social a+a {
-  margin-left: 8px;
-}
 
 </style>
 
 
+
+<section id = "successstories">
+    <div class="container">
+        <h1 class = "section-header">Success Stories</h1>
+        <div class = "testimonial-view">
+            <div class="carousel slide" id = "testimonialCarousel" data-ride = "carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-inner active">
+                        <div class="block">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="user">
+                                        <div class="image">
+                                            <img src="ADMIN/uploads/team-2.jpg" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h2>Mark Jones</h2>
+                                            <h4>Client</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p>Hello there</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<style>
+
+    #successstories {
+        margin-top: 30px;
+    }
+
+    #successstories .section-header { 
+        position: relative;
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+
+    }
+
+    #successstories .section-header::after { 
+        content: "";
+        height: 4px;
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 50px);
+        background: #000;
+    }
+
+    #successstories .testimonial-view {
+        max-width: 900px;
+        padding: 0 15px 50px;
+        margin: 0 auto 70px auto;
+    }
+</style>
 
 
 
