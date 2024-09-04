@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
+
+
 </head>
 <body>
 
@@ -463,6 +465,8 @@
         </div>
         <!-- Fact End -->
       
+
+        
          <!-- About Start -->
           <section id = "about">
          <div class="container-fluid py-5 my-5">
@@ -503,6 +507,11 @@
         </div>
         </section>
         <!-- About End -->
+
+        
+    
+
+
 
 <section id="team" class="team section">
 
@@ -651,132 +660,92 @@ $query_run = mysqli_query($conn, $query);
 
 
 
-<section id = "successstories">
-    <div class="container">
-        <h1 class = "section-header">Success Stories</h1>
-        <div class = "testimonial-view">
-            <div class="carousel slide" id = "testimonialCarousel" data-ride = "carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-inner active">
-                        <div class="block">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="user">
-                                        <div class="image">
-                                            <img src="ADMIN/uploads/team-2.jpg" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <h2 class = "user-name">Mark Jones</h2>
-                                            <h4>Client</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="content">
-                                        <p>Hello there</p>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer" data-wow-delay=".3s">
+            <div class="container pt-5 pb-4">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="index.html">
+                            <h1 class="text-white fw-bold d-block">EDUGATE<span class="text-secondary"> GLOBAL</span> </h1>
+                        </a>
+                        <p class="mt-4 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui placeat inventore consectetur repellendus optio debitis.</p>
+                        <div class="d-flex ">
+                            <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
+                            <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a>
+                            <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram text-primary"></i></a>
+                            <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
                         </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Short Link</a>
+                        <div class="mt-4 d-flex flex-column short-link">
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Help Link</a>
+                        <div class="mt-4 d-flex flex-column help-link">
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Terms Of use</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Privacy Policy</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Helps</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>FQAs</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Contact Us</a>
+                        <div class="text-white mt-4 d-flex flex-column contact-link">
+                            <a href="#" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i> 123 Street, New York, USA</a>
+                            <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> +123 456 7890</a>
+                            <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i> info@exmple.con</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-light mt-5 mb-4">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <span class="text-light">Designed By<a href="https://htmlcodex.com" class="text-secondary">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a></span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</section>
+        <!-- Footer End -->
 
 
-<style>
+        <style>
+            /*** Footer Start ***/
 
-    #successstories {
-        margin-top: 30px;
-    }
+.footer {
+    background-color: #000;
+}
 
-    #successstories .section-header { 
-        position: relative;
-        padding-bottom: 10px;
-        text-align: center;
-        font-weight: bold;
+.footer .short-link a,
+.footer .help-link a,
+.footer .contact-link a {
+    text-decoration: none;
 
-    }
-
-    #successstories .section-header::after { 
-        content: "";
-        height: 4px;
-        width: 100px;
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 50px);
-        background: #000;
-    }
-
-    #successstories .testimonial-view {
-        max-width: 900px;
-        padding: 0 15px 50px;
-        margin: 0 auto 70px auto;
-    }
-
-    #successstories .block {
-        background: #fff;
-        color: #333;
-        padding: 60px 15px 15px;
-        margin: 50px 15px;
-        box-shadow: 0 5px 30px -5px rgba(0,0,0, 0.15);
-        -webkit-box-shadow: 0 5px 30px -5px rgba(0,0,0, 0.15);
-    }
-
-    .block .row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        place-item: normal;
-    }
-
-    .user {
-        margin-bottom: 30px;
-        text-align: center;
-    }
-
-    .image {
-        position: relative;
-        margin: 0 15px 30px 15px;
-    }
-
-    .image img {
-        height: 170px;
-        width: 170px;
-        border: 7px solid #ffdfb8;
-        border-radius: 170px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    .user-name {
-        font-weight: bold;
-        margin-bottom: 10px;
-        text-align: center;
-        padding-bottom: 10px;
-        position: relative;
-    }
-
-    .user-name::after {
-        content: "";
-        height: 4px;
-        width: 50px;
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 25px);
-        background: #FCA737;
-    }
-
-    .content {
-        text-align: center;
-        font-size: 18px;
-    }
+}
 
 
-</style>
+
+
+        </style>
+
+
+
 
 
 
