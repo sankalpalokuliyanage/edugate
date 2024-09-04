@@ -666,7 +666,7 @@ $query_run = mysqli_query($conn, $query);
                                             <img src="ADMIN/uploads/team-2.jpg" alt="">
                                         </div>
                                         <div class="info">
-                                            <h2>Mark Jones</h2>
+                                            <h2 class = "user-name">Mark Jones</h2>
                                             <h4>Client</h4>
                                         </div>
                                     </div>
@@ -716,6 +716,66 @@ $query_run = mysqli_query($conn, $query);
         padding: 0 15px 50px;
         margin: 0 auto 70px auto;
     }
+
+    #successstories .block {
+        background: #fff;
+        color: #333;
+        padding: 60px 15px 15px;
+        margin: 50px 15px;
+        box-shadow: 0 5px 30px -5px rgba(0,0,0, 0.15);
+        -webkit-box-shadow: 0 5px 30px -5px rgba(0,0,0, 0.15);
+    }
+
+    .block .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        place-item: normal;
+    }
+
+    .user {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .image {
+        position: relative;
+        margin: 0 15px 30px 15px;
+    }
+
+    .image img {
+        height: 170px;
+        width: 170px;
+        border: 7px solid #ffdfb8;
+        border-radius: 170px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .user-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    .user-name::after {
+        content: "";
+        height: 4px;
+        width: 50px;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 25px);
+        background: #FCA737;
+    }
+
+    .content {
+        text-align: center;
+        font-size: 18px;
+    }
+
+
 </style>
 
 
