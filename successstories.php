@@ -132,56 +132,67 @@
     </div>
   </div>
 </nav>
+<?php
+$uname = "root";
+$pass = "";
+$host = "localhost";
+$db = "eg_xrst";
 
+$conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
+
+$query = "SELECT * FROM stories";
+$query_run = mysqli_query($conn, $query);
+?>
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-8 col-center m-auto">
-			<h2>SUCCESS STORIES</h2>
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Carousel -->
-				<div class="carousel-inner">
-					<div class="item carousel-item active">
-						<div class="img-box"><img src="img/team-3.jpg" alt=""></div><br>
-                        <p class="overview"><b>Jennifer Smith</b>, Office Worker</p>
-						<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-						<div class="col-md-4">
-                            <div class="second-img-box">
-                                <img src="img/about-1.jpg" alt="">
+    <div class="row">
+        <div class="col-md-8 col-center m-auto">
+            <h2>SUCCESS STORIES</h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel -->
+                <div class="carousel-inner">
+                    <?php
+                    if(mysqli_num_rows($query_run) > 0) {
+                        $firstItem = true; // A flag to check if it's the first item
+                        while($row = mysqli_fetch_assoc($query_run)){
+                            $activeClass = ($firstItem) ? 'active' : '';
+                            $firstItem = false; // After the first item, set this to false
+                            ?>
+                            <div class="item carousel-item <?php echo $activeClass; ?>">
+                                <div class = "storyDetail">
+                                    <div class="img-box">
+                                        <img src="admin/<?php echo htmlspecialchars($row['avatar']); ?>" alt="">
+                                    </div><br>
+                                    <p class="overview">
+                                        <b><?php echo htmlspecialchars($row['name']); ?></b>, 
+                                        <?php echo htmlspecialchars($row['visa']); ?>
+                                    </p>
+                                    <p class="testimonial"><?php echo htmlspecialchars($row['comment']); ?></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="second-img-box">
+                                        <img src="admin/<?php echo htmlspecialchars($row['picture']); ?>" alt="">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-					</div>
-					<div class="item carousel-item">
-						<div class="img-box"><img src="img/team-4.jpg" alt=""></div><br>
-                        <p class="overview"><b>Jennifer Smith</b>, Office Worker</p>
-						<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-						<div class="col-md-4">
-                            <div class="second-img-box">
-                                <img src="img/about-3.jpg" alt="">
-                            </div>
-                        </div>
-					</div>
-					<div class="item carousel-item">
-						<div class="img-box"><img src="img/team-2.jpg" alt=""></div><br>
-                        <p class="overview"><b>Jennifer Smith</b>, Office Worker</p>
-						<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-						<div class="col-md-4">
-                            <div class="second-img-box">
-                                <img src="img/about-3.jpg" alt="">
-                            </div>
-                        </div>
-					</div>
-				</div>
-				<!-- Carousel Controls -->
-				<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
-					<i class="fa fa-angle-left"></i>
-				</a>
-				<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
-					<i class="fa fa-angle-right"></i>
-				</a>
-			</div>
-		</div>
-	</div>
+                            <?php
+                        }
+                    } else {
+                        echo "<p>No records found.</p>";
+                    }
+                    ?>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -229,6 +240,17 @@ h2::after {
     overflow: hidden;
     min-height: 340px;
 }
+
+.storyDetail {
+        max-width: 500px; /* Restrict the maximum width */
+        min-height: 700px;
+        max-height: 700px;
+        padding: 15px; /* Apply padding inside the container */
+        border: 1px solid #ddd; /* Optional: Add a border to better define the container */
+        margin: 0 auto; /* Center align it */
+        box-sizing: border-box; /* Ensure padding is included in the element's total width */
+        overflow: hidden; /* Prevent overflow */
+    }
 
 /* Center the primary image */
 .img-box {
