@@ -501,10 +501,10 @@
                           higher education opportunities in South Korea. 
                           The organization is dedicated to helping Global 
                           students navigate the process of applying to universities 
-                          and colleges in South Korea. This includes services such as 
+                          and colleges in South Korea.<br><br> This includes services such as 
                           academic counseling, university selection, application assistance, 
                           visa processing, and guidance on adapting to life in South Korea.
-                            <br>
+                            
                             Given South Korea's reputation for high-quality education, particularly in fields like technology, 
                             engineering, and business, EduGate Global aims to connect students with leading Korean institutions 
                             that match their academic and career goals. The consultancy may also offer additional support, 
@@ -513,7 +513,6 @@
                             <p class="mb-4">By specializing in South Korea, EduGate Global provides tailored advice and insights, 
                               leveraging its expertise in the South Korean education system to ensure that students make informed 
                               decisions and are well-prepared for their studies abroad.</p>
-                        
                         <a href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white">More Details</a>
                     </div>
                 </div>
