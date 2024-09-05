@@ -14,6 +14,49 @@ $db = "eg_xrst";
 $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
 
 
+// Handle adding a new story
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['addStory'])) {
+    $name = $_POST['name'];
+    $visa = $_POST['visa'];
+    $comment = $_POST['comment'];
+
+    // Handle file upload
+    $avatar = '';
+    if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] == 0) {
+        $target_dir = "SuccessStories/";
+        $avatar = $target_dir . basename($_FILES["avatar"]["name"]);
+        if (!move_uploaded_file($_FILES["avatar"]["tmp_name"], $avatar)) {
+            $_SESSION['status'] = "Error uploading file.";
+            header('Location: successstoriesupload.php');
+            exit();
+        }
+    }
+
+    
+    // Handle file upload
+    $id_picture = '';
+    if (isset($_FILES['picture']) && $_FILES['picture']['error'] == 0) {
+        $target_dir = "SuccessStories/";
+        $id_picture = $target_dir . basename($_FILES["picture"]["name"]);
+        if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $id_picture)) {
+            $_SESSION['status'] = "Error uploading file.";
+            header('Location: successstoriesupload.php');
+            exit();
+        }
+    }
+
+    $sql = "INSERT INTO stories (name, visa, comment, avatar, picture) VALUES ('$name', '$visa', '$comment','$avatar', '$id_picture')";
+
+    if ($conn->query($sql) === TRUE) {
+        $_SESSION['success'] = "New story added successfully!";
+        // header('Location: ourteamedit.php');
+        // exit();
+    } else {
+        $_SESSION['status'] = "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+
 ?>
 
 
@@ -49,7 +92,7 @@ $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" name="addMember" class="btn btn-primary">Add New Team Member</button>
+            <button type="submit" name="addStory" class="btn btn-primary">Add New Story</button>
         </div>
       </form>
       </div>
@@ -108,8 +151,8 @@ $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
                                             <?php endif; ?>
                                         </td>
                                         <td><?php echo $row['name']?></td>
-                                        <td><?php echo $row['position']?></td>
-                                        <td><?php echo $row['description']?></td>
+                                        <td><?php echo $row['visa']?></td>
+                                        <td><?php echo $row['comment']?></td>
                                         <td>
                                             <?php if($row['picture'] != ''): ?>
                                                 <img src="<?php echo $row['picture']; ?>" alt="Grant Notice" width="50">
