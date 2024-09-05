@@ -21,25 +21,30 @@ $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="AddStoryLabel">Add Team Member</h5>
+        <h5 class="modal-title" id="AddStoryLabel">Add Story</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+            <label for="avatar">Avatar:</label>
+            <input type="file" id="avatar" name="avatar" class="form-control">
+        </div>
+
         <div class="mb-3">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label for="position">Position:</label>
-            <input type="text" id="position" name="position" class="form-control" required>
+            <label for="visa">Visa:</label>
+            <input type="text" id="visa" name="visa" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" class="form-control"></textarea>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" class="form-control"></textarea>
         </div>
         <div class="mb-3">
-            <label for="picture">Picture:</label>
+            <label for="picture">Grant Notice:</label>
             <input type="file" id="picture" name="picture" class="form-control">
         </div>
         <div class="modal-footer">
@@ -58,7 +63,7 @@ $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
             <h6 class="m-0 font-weight-bold text-primary">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddStory">
-                    Add Team Member
+                    Add Story
                 </button>
             </h6>
         </div>
@@ -81,10 +86,11 @@ $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                        <th>Avatar</th>
                         <th>Name</th>
-                        <th>Position</th>
-                        <th>Description</th>
-                        <th>Picture</th>
+                        <th>Visa</th>
+                        <th>Comment</th>
+                        <th>Grant Notice</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
@@ -94,12 +100,19 @@ $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
                                 while($row = mysqli_fetch_assoc($query_run)){
                                     ?>
                                     <tr>
+                                        <td>
+                                            <?php if($row['avatar'] != ''): ?>
+                                                <img src="<?php echo $row['avatar']; ?>" alt="Avatar" width="50">
+                                            <?php else: ?>
+                                                No Avatar
+                                            <?php endif; ?>
+                                        </td>
                                         <td><?php echo $row['name']?></td>
                                         <td><?php echo $row['position']?></td>
                                         <td><?php echo $row['description']?></td>
                                         <td>
                                             <?php if($row['picture'] != ''): ?>
-                                                <img src="<?php echo $row['picture']; ?>" alt="ID Picture" width="50">
+                                                <img src="<?php echo $row['picture']; ?>" alt="Grant Notice" width="50">
                                             <?php else: ?>
                                                 No picture
                                             <?php endif; ?>
