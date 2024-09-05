@@ -163,10 +163,10 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#review">Reviews</a>
+          <a class="nav-link" href="#footer">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="#contact">Contact Us</a>
+          <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="#">SUCCESS STORIES</a>
         </li>
       
       </ul>
@@ -250,7 +250,7 @@
 }
 
 .carousel-caption .carousel-content a button.carousel-content-btn1 {
-    background: #1842b6;
+    background: #2797f2;
     color: #000103;
     opacity: 1;
     border: 0;
@@ -397,9 +397,9 @@
                         <div class="carousel-caption">
                             <div class="container carousel-content">
                                 <h6 class="text h4 animated fadeInUp">STUDY IN SOUTH KOREA</h6>
-                                <h1 class="text-white display-1 mb-4 animated fadeInRight">Achieve Your Dreams with EduGate Sri Lanka</h1>
-                                <p class="mb-4 text-white fs-5 animated fadeInDown">Edu Gate Sri Lanka is a premier educational consultancy service dedicated to helping students achieve their dreams of studying South Korea.</p>
-                                <a href="" class="me-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Read More</button></a>
+                                <h1 class="text-white display-1 mb-4 animated fadeInRight">Achieve Your Dreams with EduGate Global</h1>
+                                <p class="mb-4 text-white fs-5 animated fadeInDown">EduGate Global is a premier educational consultancy service dedicated to helping students achieve their dreams of studying South Korea.</p>
+                                <a href="#about" class="me-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Read More</button></a>
                                 <!-- <a href="" class="ms-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight">Contact Us</button></a> -->
                             </div>
                         </div>
@@ -411,7 +411,20 @@
                                 <h6 class="text h4 animated fadeInUp">BEST SERVICE</h6>
                                 <h1 class="text-white display-1 mb-4 animated fadeInLeft">Your Trusted Partner in Education and Visa Services</h1>
                                 <p class="mb-4 text-white fs-5 animated fadeInDown">Our consultancy services, we host informative workshops and seminars that cover various aspects of studying South Korea, from visa procedures to cultural adaptation. </p>
-                                <a href="" class="me-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Read More</button></a>
+                                <a href="#about" class="me-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Read More</button></a>
+                                <!-- <a href="" class="ms-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight">Contact Us</button></a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-3.jpg" class="img-fluid " alt="Second slide">
+                        <div class="carousel-caption">
+                            <div class="container carousel-content">
+                                <h6 class="text h4 animated fadeInUp">TOP UNIVERSITIES IN SOUTH KOREA</h6>
+                                <h1 class="text-white display-1 mb-4 animated fadeInLeft">Study at World-Renowned Institutions
+                                </h1>
+                                <p class="mb-4 text-white fs-5 animated fadeInDown">EduGate Global partners with top-ranked universities in South Korea, offering you the opportunity to pursue your education at some of the best institutions in the world. Take the first step toward a brighter future with us!</p>
+                                <a href="#about" class="me-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Read More</button></a>
                                 <!-- <a href="" class="ms-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight">Contact Us</button></a> -->
                             </div>
                         </div>
@@ -433,7 +446,7 @@
 
 
         <!-- Fact Start -->
-        <div class="container-fluid bg-secondary py-5">
+        <div class="container-fluid bg-dark py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 wow slideInUp" >
@@ -476,7 +489,7 @@
                         <div class="h-100 position-relative">
                             <img src="img/about-1.jpg" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
                             <div class="position-absolute w-75" style="top: 25%; left: 25%;">
-                                <img src="img/about-2.jpg" class="img-fluid w-100 rounded" alt="">
+                                <img src="img/about-3.jpg" class="img-fluid w-100 rounded" alt="">
                             </div>
                         </div>
                     </div>
@@ -663,8 +676,7 @@ $query_run = mysqli_query($conn, $query);
 
 
 
-
-
+<section id = "footer">
         <!-- Footer Start -->
         <div class="container-fluid footer" data-wow-delay=".3s">
             <div class="container pt-5 pb-4">
@@ -673,62 +685,69 @@ $query_run = mysqli_query($conn, $query);
                         <a href="index.html">
                             <h1 class="text-white fw-bold d-block">EDUGATE<span class="text-secondary"> GLOBAL</span> </h1>
                         </a>
-                        <p class="mt-4 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui placeat inventore consectetur repellendus optio debitis.</p>
+                        <p class="mt-4 text-light">EduGate Global is an educational consultancy that specifically focuses on facilitating higher education opportunities in South Korea. The organization is dedicated to helping Global students navigate the process of applying to universities and colleges in South Korea. </p>
                         <div class="d-flex ">
                             <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
-                            <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a>
+                            <!-- <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a> -->
                             <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram text-primary"></i></a>
                             <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <a href="#" class="h3 text-secondary">Short Link</a>
                         <div class="mt-4 d-flex flex-column short-link">
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
+                            <!-- <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a> -->
+                            <!-- <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a> -->
+                            <!-- <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a> -->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <a href="#" class="h3 text-secondary">Help Link</a>
-                        <div class="mt-4 d-flex flex-column help-link">
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Terms Of use</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Privacy Policy</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Helps</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>FQAs</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact</a>
+                    <div class="text-white mt-4 d-flex flex-column contact-link">
+                            <a href="#" class="pb-3 text-light "><i class="fas fa-map-marker-alt text-secondary me-2"></i> <span class= "text-secondary">HEAD OFFICE:</span><br> 275/2, HIGH LEVEL ROAD, PITIPANA JUNCTION,
+                            HOMAGAMA, SRI LANKA.</a>
+                            
+                            <a href="#" class=" text-light "><i class="fas fa-phone-alt text-secondary me-2"></i> +94 117 241 805</a>
+                            <a href="#" class=" text-light "><i class="fa-brands fa-whatsapp text-secondary me-2"></i> +94 741 155 330</a>
+                            <a href="#" class=" text-light "><i class="fas fa-envelope text-secondary me-2"></i> info@edugateglobal.com</a>
+                            <br>
+                            <a href="#" class="pb-3 text-light "><i class="fas fa-map-marker-alt text-secondary me-2"></i> <span class= "text-secondary">SOUTH KOREA OFFICE: </span><br> 대구 수성구 달구벌대로 2666-1 3F</a>
+                            
+                            <a href="#" class=" text-light "><i class="fas fa-phone-alt text-secondary me-2"></i> +82 10 5966 5946</a>
+                            <a href="#" class=" text-light "><i class="fa-brands fa-whatsapp text-secondary me-2"></i> +82 10 5966 5946</a>
+                            <a href="#" class=" text-light "><i class="fas fa-envelope text-secondary me-2"></i> info@edugateglobal.com</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <a href="#" class="h3 text-secondary">Contact Us</a>
                         <div class="text-white mt-4 d-flex flex-column contact-link">
-                            <a href="#" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i> 123 Street, New York, USA</a>
-                            <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> +123 456 7890</a>
-                            <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i> info@exmple.con</a>
+                            <a href="#" class=" text-light border-top border-primary border-bottom border-primary" style = "padding-top: 10px;"><i class="fas fa-map-marker-alt text-secondary me-2"></i> <span class= "text-secondary">ANURADHAPURA BRANCH:</span> ANURADHAPURA, SRI LANKA.</a>
+                            <!-- <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> +94 117 241 805</a> -->
+                            <a href="#" class="text-light" style = "margin-top: 10px;"><i class="fas fa-map-marker-alt text-secondary me-2"></i> <span class= "text-secondary">POLONNARUWA BRANCH:</span> POLONNARUWA, SRI LANKA.</a>
+                            <!-- <a href="#" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> +94 117 241 805</a> -->
                         </div>
                     </div>
                 </div>
                 <hr class="text-light mt-5 mb-4">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start">
-                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>Your Site Name</a>, All right reserved.</span>
+                        <span class="text-light"><i class="fas fa-copyright text-secondary me-2"></i>EDUGATE GLOBAL, All right reserved.</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        <span class="text-light">Designed By<a href="https://htmlcodex.com" class="text-secondary">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a></span>
+                        <span class="text-light">Designed By <a href="https://sankalpalokuliyanage.github.io" class="text-secondary">SANKALPA LOKULIYANAGE</a> </span>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer End -->
+        </section>
 
 
         <style>
             /*** Footer Start ***/
 
 .footer {
+    margin-top: 30px;
     background-color: #000;
 }
 
