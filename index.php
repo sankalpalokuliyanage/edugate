@@ -449,6 +449,12 @@
         <div class="container-fluid bg-dark py-5">
             <div class="container">
                 <div class="row">
+                <div class="col-lg-3 wow slideInUp">
+                        <div class="d-flex counter">
+                            <h1 class="me-3 text-primary counter-value">100%</h1>
+                            <h5 class="text-white mt-1">Visa Success Rate</h5>
+                        </div>
+                    </div>
                     <div class="col-lg-3 wow slideInUp" >
                         <div class="d-flex counter">
                             <h1 class="me-3 text-primary counter-value">99</h1>
@@ -461,12 +467,7 @@
                             <h5 class="text-white mt-1">Universities In South Korea</h5>
                         </div>
                     </div>
-                    <div class="col-lg-3 wow slideInUp">
-                        <div class="d-flex counter">
-                            <h1 class="me-3 text-primary counter-value">100</h1>
-                            <h5 class="text-white mt-1">% Visa Success Rate</h5>
-                        </div>
-                    </div>
+               
                     <div class="col-lg-3 wow slideInUp">
                         <div class="d-flex counter">
                             <h1 class="me-3 text-primary counter-value">5</h1>
@@ -695,8 +696,9 @@ $query_run = mysqli_query($conn, $query);
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="mt-4 d-flex flex-column short-link">
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
-                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
+                            <a href="#about" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
+                            <a href="#contact" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
+                            <a href="successstories.php" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Success Stories</a>
                             <!-- <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a> -->
                             <!-- <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a> -->
                             <!-- <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a> -->
