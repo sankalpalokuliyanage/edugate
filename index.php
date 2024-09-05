@@ -166,7 +166,7 @@
           <a class="nav-link" href="#footer">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="#">SUCCESS STORIES</a>
+          <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="successstories.php">SUCCESS STORIES</a>
         </li>
       
       </ul>

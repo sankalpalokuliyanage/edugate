@@ -37,10 +37,16 @@
             
             <li class="nav-item active">
                 <a class="nav-link" href="ourteamedit.php">
-                    <i class="	fas fa-users"></i>
+                    <i class="fas fa-users"></i>
                     <span>TEAM MANAGEMENT</span></a>
             </li>
          
+
+            <li class="nav-item active">
+                <a class="nav-link" href="successstoriesupload.php">
+                    <i class="fas fa-bullseye"></i>
+                    <span>SUCCESS STORIES</span></a>
+            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
