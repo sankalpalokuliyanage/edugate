@@ -50,7 +50,7 @@
 
 <style>
 
-body {
+	body {
     font-family: 'Noto Sans', sans-serif;
     padding: 40px 0;
 }

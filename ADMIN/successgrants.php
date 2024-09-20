@@ -13,99 +13,86 @@ $db = "eg_xrst";
 
 $conn = mysqli_connect($host, $uname, $pass, $db) or die("DB connection error");
 
-
 // Handle adding a new story
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['addStory'])) {
-    $name = $_POST['name'];
-    $visa = $_POST['visa'];
-    $comment = $_POST['comment'];
-
-    // Handle file upload
-    $avatar = '';
-    if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] == 0) {
-        $target_dir = "SuccessStories/";
-        $avatar = $target_dir . basename($_FILES["avatar"]["name"]);
-        if (!move_uploaded_file($_FILES["avatar"]["tmp_name"], $avatar)) {
-            $_SESSION['status'] = "Error uploading file.";
-            header('Location: successstoriesupload.php');
-            exit();
-        }
-    }
-
-    
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['addImage'])) {
+        
     // Handle file upload
     $id_picture = '';
     if (isset($_FILES['picture']) && $_FILES['picture']['error'] == 0) {
-        $target_dir = "SuccessStories/";
+        $target_dir = "gallery/";
         $id_picture = $target_dir . basename($_FILES["picture"]["name"]);
         if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $id_picture)) {
             $_SESSION['status'] = "Error uploading file.";
-            header('Location: successstoriesupload.php');
+            header('Location: successgrants.php');
             exit();
         }
     }
 
-    $sql = "INSERT INTO stories (name, visa, comment, avatar, picture) VALUES ('$name', '$visa', '$comment','$avatar', '$id_picture')";
+    $sql = "INSERT INTO successgrants (picture) VALUES ('$id_picture')";
 
     if ($conn->query($sql) === TRUE) {
-        $_SESSION['success'] = "New story added successfully!";
-        // header('Location: ourteamedit.php');
-        // exit();
+        $_SESSION['success'] = "New image added successfully!";
     } else {
         $_SESSION['status'] = "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 
-
 // Handle the delete functionality
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_story'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_image'])) {
     $id = $_POST['id'];
 
-    // Query to delete the member from the database
-    $sql = "DELETE FROM stories WHERE id='$id'";
-    if ($conn->query($sql) === TRUE) {
-        $_SESSION['success'] = "deleted successfully!";
+    // First, retrieve the image path from the database
+    $sql = "SELECT picture FROM successgrants WHERE id='$id'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $imagePath = $row['picture'];  // Assuming 'picture' is the column where the image path is stored
+
+        // Check if the file exists before attempting to delete it
+        if (file_exists($imagePath)) {
+            if (unlink($imagePath)) {
+                // File successfully deleted from the server
+
+                // Now delete the record from the database
+                $sql = "DELETE FROM successgrants WHERE id='$id'";
+                if ($conn->query($sql) === TRUE) {
+                    $_SESSION['success'] = "Record and image deleted successfully!";
+                } else {
+                    $_SESSION['status'] = "Error deleting record: " . $conn->error;
+                }
+            } else {
+                $_SESSION['status'] = "Error deleting image file from server.";
+            }
+        } else {
+            $_SESSION['status'] = "Image file does not exist.";
+        }
     } else {
-        $_SESSION['status'] = "Error deleting record: " . $conn->error;
+        $_SESSION['status'] = "Record not found in the database.";
     }
 }
+
 
 ?>
 
 
-<div class="modal fade" id="AddStory" tabindex="-1" role="dialog" aria-labelledby="AddStoryLabel" aria-hidden="true">
+<div class="modal fade" id="AddImage" tabindex="-1" role="dialog" aria-labelledby="AddImageLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="AddStoryLabel">Add Story</h5>
+        <h5 class="modal-title" id="AddImageLabel">Add Image</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form method="POST" enctype="multipart/form-data">
-      <div class="mb-3">
-            <label for="avatar">Avatar:</label>
-            <input type="file" id="avatar" name="avatar" class="form-control">
-        </div>
-
+      
         <div class="mb-3">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="visa">Visa:</label>
-            <input type="text" id="visa" name="visa" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" class="form-control"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="picture">Grant Notice:</label>
+            <label for="picture">Image</label>
             <input type="file" id="picture" name="picture" class="form-control">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" name="addStory" class="btn btn-primary">Add New Story</button>
+            <button type="submit" name="addImage" class="btn btn-primary">Add New Image</button>
         </div>
       </form>
       </div>
@@ -118,8 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_story'])) {
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddStory">
-                    Add Story
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddImage">
+                    Add Image
                 </button>
             </h6>
         </div>
@@ -136,17 +123,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_story'])) {
             ?>
             <div class="table-responsive">
             <?php
-                $query = "SELECT * FROM stories";
+                $query = "SELECT * FROM successgrants";
                 $query_run = mysqli_query($conn, $query);
             ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                        <th>Avatar</th>
-                        <th>Name</th>
-                        <th>Visa</th>
-                        <th>Comment</th>
-                        <th>Grant Notice</th>
+                        <th>Image</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
@@ -156,19 +139,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_story'])) {
                                 while($row = mysqli_fetch_assoc($query_run)){
                                     ?>
                                     <tr>
-                                        <td>
-                                            <?php if($row['avatar'] != ''): ?>
-                                                <img src="<?php echo $row['avatar']; ?>" alt="Avatar" width="50">
-                                            <?php else: ?>
-                                                No Avatar
-                                            <?php endif; ?>
-                                        </td>
-                                        <td><?php echo $row['name']?></td>
-                                        <td><?php echo $row['visa']?></td>
-                                        <td><?php echo $row['comment']?></td>
+                                    
                                         <td>
                                             <?php if($row['picture'] != ''): ?>
-                                                <img src="<?php echo $row['picture']; ?>" alt="Grant Notice" width="50">
+                                                <img src="<?php echo $row['picture']; ?>" alt="picture" width="100">
                                             <?php else: ?>
                                                 No picture
                                             <?php endif; ?>
@@ -177,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_story'])) {
                                             <!-- Delete functionality -->
                                             <form method="POST" style="display:inline;">
                                                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                                <button type="submit" name="delete_story" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this member?');">Delete</button>
+                                                <button type="submit" name="delete_image" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this?');">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -196,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_story'])) {
 
 <script>
 // Reset form on modal close
-document.getElementById('AddStory').addEventListener('hidden.bs.modal', function () {
+document.getElementById('addImage').addEventListener('hidden.bs.modal', function () {
     this.querySelector('form').reset();
 });
 </script>

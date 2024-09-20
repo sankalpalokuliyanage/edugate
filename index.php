@@ -113,6 +113,71 @@
     
 }
 
+/* Mega Menu Full Width */
+.nav-item.dropdown {
+    position: static; /* Ensures dropdown is relative to the navbar */
+}
+
+.dropdown-menu {
+    width: 100vw; /* Make dropdown menu full width */
+    left: 0; /* Align to the left edge of the screen */
+    right: 0; /* Align to the right edge of the screen */
+    top: 100%; /* Position below the navbar */
+    padding: 2rem;
+    background-color: #f8f9fa; /* Light background */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+}
+
+.dropdown-menu .container {
+    max-width: 100%; /* Full width for the container within the dropdown */
+}
+
+.dropdown-header {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.dropdown-item {
+    display: block;
+    /* padding: 0.5rem 0; */
+    font-size: 14px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Navbar Button Styling */
+.nav-link.btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+}
+
+/* Responsive Styles for Mega Menu */
+@media (max-width: 992px) {
+    .dropdown-menu {
+        padding: 1rem 1rem;
+    }
+    
+    .dropdown-header {
+        font-size: 0.8rem;
+    }
+
+    .dropdown-item {
+        font-size: 0.6rem;
+    }
+
+    .dropdown-menu .row > div {
+        padding: 0.5rem 0;
+    }
+}
+
+
     
 </style>
 
@@ -138,42 +203,76 @@
         </div>
         <!-- Topbar End -->
 
-    <!-- navbar -->
+   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="img/Logo_global.png" class = "logo" alt="logo" >
+            <img src="img/Logo_global.png" class="logo" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mg-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link" href="#team">Our Team</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#footer">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="successstories.php">SUCCESS STORIES</a>
-        </li>
-      
-      </ul>
-      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mg-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <!-- Programs Dropdown with Mega Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                    </a>
+                    <div class="dropdown-menu p-4" aria-labelledby="programsDropdown">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">DIPLOMA OR ASSOCIATE DEGREE</h6>
+                                    <p class="dropdown-item" href="#">KOREAN LANGUAGE PROGRAM</p>
+                                    <p class="dropdown-item" href="#">INFORMATION TECHNOLOGY</p>
+                                   
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">BACHELOR DEGREE</h6>
+                                    <p class="dropdown-item" href="#">GLOBAL BUSINESS</p>
+                                    <p class="dropdown-item" href="#">COMPUTER ENGINEERING</p>
+                                    <p class="dropdown-item" href="#">MECHATRONICS ENGINEERING</p>
+                                    <p class="dropdown-item" href="#">INFORMATION SYSTEM AND SECURITY</p>
+                                    <p class="dropdown-item" href="#">BUSINESS ADMINISTRATION</p>
+                                    <p class="dropdown-item" href="#">INTERNATIONAL TOURISM MANAGEMENT</p>
+                                    <p class="dropdown-item" href="#">SOFTWARE ENGINEERING</p>
+                                    <p class="dropdown-item" href="#">ARTIFICIAL INTELLIGENCE</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="dropdown-header">MASTERS AND PHD</h6>
+                                    <p class="dropdown-item" href="#">SOFTWARE AI</p>
+                                    <p class="dropdown-item" href="#">CHEMICAL ENGINEERING</p>
+                                    <p class="dropdown-item" href="#">ARCHITECTURAL ENGINEERING</p>
+                                    <p class="dropdown-item" href="#">MECHANICAL AND AUTOMOTIVE ENGINEERING</p>
+                                    <p class="dropdown-item" href="#">CIVIL ENGINEERING</p>
+                                    <p class="dropdown-item" href="#">ENVIRONMENTAL ENGINEERING</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn text-white bg-dark px-3 rounded-5" href="successstories.php">SUCCESS STORIES</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
+
 
 
 <style>
@@ -255,7 +354,7 @@
     opacity: 1;
     border: 0;
     border-radius: 20px;
-    margin-bottom: 25%;
+    /* margin-bottom: 25%; */
 }
 
 .carousel-caption .carousel-content a button.carousel-content-btn1:hover {
@@ -306,24 +405,26 @@
 @media (max-width: 768px) {
     .carousel-item {
         min-height: 400px;
+        margin-bottom: -10%;
     }
     
     .carousel-item img {
         min-height: 400px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .carousel-item h6 {
-    margin-top: 200px;
+    margin-top: 120px;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     font-weight: 700;
-}
+    }
     .carousel-item h1 {
         font-size: 18px !important;
     }
 
     .carousel-item p {
+        margin-top: -20px;
         font-size: 10px !important;
     }
 
@@ -331,19 +432,23 @@
     width: 60px;
     height: 40px;
 
-}
+    }
 
+    .carousel-control-next {
+        width: 60px;
+        height: 40px;
 
+    }
 
-.carousel-control-next {
-    width: 60px;
-    height: 40px;
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        width: 18px;
+    }
 
-}
-
-.carousel-control-next-icon, .carousel-control-prev-icon {
-    width: 18px;
-}
+    
+    .carousel-caption .carousel-content a button.carousel-content-btn1 {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
 
 }
 
@@ -405,7 +510,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/carousel-2.jpg" class="img-fluid " alt="Second slide">
+                        <img src="img/carousel-3.jpg" class="img-fluid " alt="Second slide">
                         <div class="carousel-caption">
                             <div class="container carousel-content">
                                 <h6 class="text h4 animated fadeInUp">BEST SERVICE</h6>
@@ -417,14 +522,14 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/carousel-3.jpg" class="img-fluid " alt="Second slide">
+                        <img src="img/carousel-5.jpg" class="img-fluid " alt="third slide">
                         <div class="carousel-caption">
                             <div class="container carousel-content">
                                 <h6 class="text h4 animated fadeInUp">TOP UNIVERSITIES IN SOUTH KOREA</h6>
                                 <h1 class="text-white display-1 mb-4 animated fadeInLeft">Study at World-Renowned Institutions
                                 </h1>
                                 <p class="mb-4 text-white fs-5 animated fadeInDown">EduGate Global partners with top-ranked universities in South Korea, offering you the opportunity to pursue your education at some of the best institutions in the world. Take the first step toward a brighter future with us!</p>
-                                <a href="#about" class="me-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Read More</button></a>
+                                <!-- <a href="#about" class="me-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Read More</button></a> -->
                                 <!-- <a href="" class="ms-2"><button type="button" class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight">Contact Us</button></a> -->
                             </div>
                         </div>
@@ -443,6 +548,120 @@
         </section>
         <!-- Carousel End -->
 
+
+<div class="container h-100">
+  <div class="row align-items-center h-100">
+    <div class="container rounded">
+      <h1 class="text-center"></h1>
+      <div class="slider">
+        <div class="logos">
+            <img src="img/72ppi/Asset_2.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_3.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_4.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_5.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_6.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_7.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_8.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_9.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_10.png" alt="University Logo"/>
+        </div>
+        <div class="logos">
+            <img src="img/72ppi/Asset_2.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_3.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_4.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_5.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_6.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_7.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_8.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_9.png" alt="University Logo"/>
+            <img src="img/72ppi/Asset_10.png" alt="University Logo"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+   /* Container styling */
+.container {
+  overflow: hidden;
+}
+
+/* Slider styling */
+.slider {
+  animation: slidein 30s linear infinite;
+  white-space: nowrap;
+}
+
+/* Logos container */
+.logos {
+  width: 100%; /* Adjusted for larger screens */
+  display: inline-block;
+  margin: 20px;
+}
+
+/* Individual logo styling */
+.logos img {
+  width: calc(100% / 9); /* Shows 9 logos at a time */
+  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+
+/* Slide animation */
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive design for tablets and mobile */
+
+/* For screens up to 768px (tablets) */
+@media (max-width: 768px) {
+  .logos {
+    width: 100%; /* Adjusted width for tablets */
+    margin: 15px;
+  }
+
+  .logos img {
+    width: calc(100% / 9); /* Show 5 logos at a time */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust heading size for tablets */
+  }
+}
+
+/* For screens up to 480px (mobile phones) */
+@media (max-width: 480px) {
+  .logos {
+    width: 100%; /* Adjusted width for small phones */
+  }
+
+  .logos img {
+    width: calc(100% / 9); /* Show 3 logos at a time */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust heading size for small phones */
+  }
+}
+
+
+</style>
 
 
         <!-- Fact Start -->

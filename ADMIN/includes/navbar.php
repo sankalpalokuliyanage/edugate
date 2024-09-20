@@ -14,7 +14,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -28,26 +28,39 @@
                 Interface
             </div>
 
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="register.php">
                     <i class="fas fa-fw fa-user-alt"></i>
                     <span>USER MANAGEMENT</span></a>
             </li>
 
             
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="ourteamedit.php">
                     <i class="fas fa-users"></i>
                     <span>TEAM MANAGEMENT</span></a>
             </li>
          
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="successstoriesupload.php">
                     <i class="fas fa-bullseye"></i>
                     <span>SUCCESS STORIES</span></a>
             </li>
 
+            
+            <li class="nav-item">
+                <a class="nav-link" href="imageupload.php">
+                    <i class="fas fa-image"></i>
+                    <span>IMAGE GALLERY</span></a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="successgrants.php">
+                    <i class="fas fa-image"></i>
+                    <span>SUCCESS GRANTS</span></a>
+            </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
